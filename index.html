@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{background: #fda50e;}
+.sidebar {width:auto;height: auto ;position: fixed;z-index: 1;top:0;left: 20px;background: -webkit-linear-gradient(#fdf97e, #fd8de9); overflow-x: hidden; padding-top: 16px; }
+.sidebar a { padding: 6px 8px 6px 16px; text-decoration: none; font-size: 20px; color: #161515; display: block;}
+.sidebar a:hover {color: #f1f1f1;}
+.slideshow-container{height: 700px; width:1200px;position:absolute;margin-left:250px; top: 250px;}
+.welcome{position:relative;font-size: 80px;font-family: "Lato", sans-serif ;text-align:center;width: auto;height:50px;}
+.text-block {position: absolute;top: 205px;margin-left:500px;height:auto;color:white;font-size:30px;width:500px; text-align:center;}
+.footer{top: 1500px;position:absolute;width: 1000px;left: 450px;font-size: xx-large;}
+ .flip-box {
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+.flip-box-inner {
+  position: relative; 
+  text-align: center; 
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front { 
+  align-items:center;
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+<div class="sidebar">
+  <a href="foods.html"><i class="fa fa-fw fa-user"></i> Foods</a>
+  <a href="deficiency.html"><i class="fa fa-fw fa-user"></i> Deficiencies</a>
+  <a href="ben.html"><i class="fa fa-fw fa-user"></i>Benefits</a>
+</div>
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="vitdef.png" style="height: 700px; width:1200px;position:relative;margin-left:100px; top:0;" onclick="href=deficiency.html">
+        <div class="text-block">
+  </div>
+    </div>
+    <div class="mySlides">  
+        <img src="vitrich.jpg" style="height: 700px; width:1200px;position:relative;margin-left:100px; top:0;" onclick="href=foods.html">
+        <div class="text-block">
+  </div>
+    </div>
+    <div class="mySlides">  
+        <img src="vitben.jpg" style="height: 700px; width:1200px;position:relative;margin-left:100px; top:0;" onclick="href=ben.html.html">
+        <div class="text-block">
+  </div>
+    </div>
+</div>
+<div class="welcome"><h4 style="color:white">THE SOUL OF HEALTH</h4></div>
+<!--   <div class="spoon"><img src="images/spoon.png"></div>  -->
+<br><br><br><br><br><br>
+<div class="footer" style="background-color:rgb(253, 247, 152);text-align:center;height:100px;font-size: larger;">
+  <br>
+  <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <a href="admin.html"><i class="fa fa-fw fa-key"></i>Admin-Login</a>
+  <h5>all copyrights reserved</h5>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var l=document.getElementsByClassName("login");
+  var s=document.getElementsByClassName("SignUp");
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 2000); 
+}
+</script>
+</body>
+</html> 
